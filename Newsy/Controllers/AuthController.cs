@@ -1,7 +1,5 @@
-﻿using Newsy.Services.Implementation;
-using Newsy.Services.Interfaces;
+﻿using Newsy.Services.Interfaces;
 using Newsy.ViewModels;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Newsy.Controllers

@@ -1,12 +1,10 @@
-﻿using Newsy.Data;
-using Newsy.Models;
+﻿using Newsy.Models;
 using Newsy.Repository.Interfaces;
 using Newsy.Services.Interfaces;
 using Newsy.ViewModels;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
-using System.Runtime.Intrinsics.X86;
 using System.Security.Claims;
 using System.Text;
 
@@ -24,7 +22,6 @@ namespace Newsy.Services.Implementation
 
         public string Authenticate(string username, string password)
         {
-            // Find the user in the mock data
             var user = _userRepository.GetByUsername(username);
 
             if (user == null) return null; // User not found
@@ -49,7 +46,7 @@ namespace Newsy.Services.Implementation
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
             };
             var token = tokenHandler.CreateToken(tokenDescriptor);
-            return tokenHandler.WriteToken(token); // Return the token
+            return tokenHandler.WriteToken(token);
         }
 
         public void Signup(SignupViewModel model)

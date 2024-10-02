@@ -1,6 +1,4 @@
-﻿using System.Security.Permissions;
-
-namespace Newsy.ViewModels
+﻿namespace Newsy.ViewModels
 {
     public class UserViewModel
     {

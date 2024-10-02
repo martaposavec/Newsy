@@ -3,7 +3,6 @@ using Newsy.Models;
 using Newsy.Repository.Interfaces;
 using Newsy.Services.Interfaces;
 using Newsy.ViewModels;
-using Microsoft.AspNetCore.Http.HttpResults;
 
 namespace Newsy.Services.Implementation
 {
