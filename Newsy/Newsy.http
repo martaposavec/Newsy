@@ -1,0 +1,6 @@
+@Newsy_HostAddress = http://localhost:5212
+
+GET {{Newsy_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
